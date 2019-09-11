@@ -333,7 +333,7 @@ int funcaoAgente(int esquerda, int direita, int cima, int baixo){
     }
 
 
-        return rand()%4;
+  //      return rand()%4;
     }
 
 
