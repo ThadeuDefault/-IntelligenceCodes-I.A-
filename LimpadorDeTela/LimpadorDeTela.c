@@ -280,8 +280,62 @@ int funcaoAgente(int esquerda, int direita, int cima, int baixo){
             }
         }
     }
-	return rand()%4;
-}
+
+    //Caso ele já tenha ido pra baixo
+    if (posAgentAnterior == 3){
+            if( cima == 2 ){
+                if(direita == 2){
+                    posAgentAnterior = 1;
+                    return 1;
+                }else if (esquerda == 2){
+                    posAgentAnterior = 0;
+                    return 0;
+                }else{
+                    posAgentAnterior = 2;
+                    return 2;
+                }
+            }else if (cima == 1){
+                if(direita == 2){
+                    posAgentAnterior = 1;
+                    return 1;
+                }else if (esquerda == 2){
+                    posAgentAnterior = 0;
+                    return 0;
+                }else{
+                    posAgentAnterior = 2;
+                    return 2;
+                }
+            }else{
+                if (esquerda == 2){
+                    if(direita == 2){
+                        posAgentAnterior = 1;
+                        return 1;
+                    }else{
+                        posAgentAnterior = 0;
+                        return 0;
+                    }
+                }else if(esquerda == 1){
+                    if(direita == 2){
+                        posAgentAnterior = 1;
+                        return 1;
+                    }else{
+                        posAgentAnterior = 0;
+                        return 0;
+                    }
+                }else{
+                    posAgentAnterior = 1;
+                    return 1;
+                }
+
+            }
+
+
+    }
+
+
+        return rand()%4;
+    }
+
 
 int main()
 {
